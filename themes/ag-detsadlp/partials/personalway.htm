@@ -1,0 +1,31 @@
+==
+<section id="personal">
+  <!-- <img class="sled11" src="img/sled11.png"> -->
+<div class="container-fluid">
+    <div class="row">
+      <div class="col-xs-12 personal_title_bg">
+        <div class="row">
+            <div class="col-xs-3">
+                <img class="personal_title_img" src="{{ 'assets/img/letters.png'|theme }}">
+            </div>
+            <div class="col-xs-9">
+              {% component 'editable' file="personalway/title.htm" %}
+            </div>
+        </div>    
+      </div>      
+    </div>
+    <div class="wrap_childe1">
+      <img class="imgch1" src="{{ 'assets/img/personal-child1.jpg'|theme }}"  alt="">
+    </div>
+    <div class="wrap_childe2">
+      <img class="imgch2" src="{{ 'assets/img/personal-childe2.jpg'|theme }}"  alt="">
+    </div>
+      
+    <div class="row ">
+        <div class="ds7-block1" >
+            {% component 'editable' file="personalway/text.htm" %}
+        </div>        
+    </div>  
+  
+</div>    
+</section>

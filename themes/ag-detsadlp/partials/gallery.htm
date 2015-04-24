@@ -1,0 +1,41 @@
+[gallery]
+idGallery = "1"
+lang = "Галерея"
+jqueryinject = "yes"
+thumbnail = "true"
+caption = "false"
+desc = "false"
+counter = "false"
+controls = "true"
+preload = "2"
+mode = "slide"
+speed = "500"
+loop = "true"
+auto = "false"
+pause = "2000"
+escKey = "true"
+height = "200"
+width = "300"
+resizer = "auto"
+==
+
+
+<!-- Gallery -->
+<section id="galsec" class="gallerysec">
+	<div class="container-fluid">
+	  <div class="row">
+	    <div class="col-xs-12 text-center galtitlebg">
+	      <p class="block-title">ФОТОГАЛЕРЕЯ</p>
+	    </div>
+	  </div> 	
+		<div class="row">
+		  <!-- Make your own style div wrapper for gallery -->
+		  <div class="col-xs-12 text-center">
+		  	<div class="wrapgal">
+		      {% component 'gallery' %}
+		    </div>  
+		  </div>
+		</div>
+	</div>
+</section>
+<!-- End Gallery -->

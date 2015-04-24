@@ -1,0 +1,70 @@
+<section id="contacts">
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-xs-12 cont_title">
+      <span class="block-title text-center">КОНТАКТЫ</span>
+    </div>
+  </div>
+
+  <div class="wrap_map">
+      <div class="callback text-center">
+        <div class="confirm-container"><img src="{{ 'assets/img/leobottom.jpg'|theme }}" alt=""></div>
+        <span class="calltitle">Заполнить заявку</span>
+        <form class="flexiContactForm" role="form"
+          data-request="contactForm::onMailSent"
+          data-request-update="'contactForm::confirm': '.confirm-container'">
+          <div class="form-group">
+            <div>
+              <input type="input" class="form-control myinp" id="exampleInputName" value=""  name="name" placeholder="ИМЯ">        
+              <input type="email" class="form-control myinp" id="exampleInputEmail1" value="" name="email" placeholder="ПОЧТА">        
+              <input type="phone" class="form-control myinp" id="exampleInputEmail1" value="" name="phone" placeholder="ТЕЛЕФОН"></div>
+            <div>
+              <button type="submit" class="btn btn-default btncallback">Отправить</button>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div id="map" class="col-md-8 text-center"></div>
+  </div>
+</div>    
+</section>
+
+
+  <script src="http://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+  <script type="text/javascript">
+var myMap;
+ 
+// Дождёмся загрузки API и готовности DOM.
+ymaps.ready(init);
+function init () {
+    // Создание экземпляра карты и его привязка к контейнеру с
+    // заданным id ("map").
+    myMap = new ymaps.Map('map', {
+        // При инициализации карты обязательно нужно указать
+        // её центр и коэффициент масштабирования.
+        center: [43.207469,76.970043], 
+        zoom: 17
+    }),
+      myGeoObject = new ymaps.GeoObject({
+            // Описание геометрии.
+            geometry: {
+                type: "Point",
+                coordinates: [43.207469,76.970043]
+            },  
+            // Свойства.
+            properties: {
+                // Контент метки.
+                iconContent: 'проспект Достык, 341, Алматы. <br> Детский Сад Cambridge Kids',
+                hintContent: ''
+            }
+        }, {
+            // Опции.
+            // Иконка метки будет растягиваться под размер ее содержимого.
+            preset: 'islands#blackStretchyIcon',
+            // Метку можно перемещать.
+            draggable: true
+        });  
+        myMap.geoObjects
+        .add(myGeoObject);            
+}
+</script>

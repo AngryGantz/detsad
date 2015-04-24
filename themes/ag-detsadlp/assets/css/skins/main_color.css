@@ -1,0 +1,58 @@
+body {
+  color: #000; }
+
+a {
+  color: #FF6347; }
+
+p {
+  color: #000; }
+
+.bluecol2 {
+  color: #003d64; }
+
+.redcol {
+  color: #CD0000; }
+
+.redcol2 {
+  color: #7C0004; }
+
+.greencol {
+  color: #407501; }
+
+.bluecol {
+  color: #007DD5; }
+
+.color_element {
+  color: #FF6347; }
+
+.color_bg {
+  background-color: #FF6347; }
+
+.color_border {
+  border-color: #FF6347; }
+
+#logo .yellow {
+  background: #FFC412; }
+  #logo .yellow h1 {
+    color: #fff; }
+
+.blue1,
+.blue2 {
+  color: #008DD2; }
+
+.menu li a {
+  color: #668009; }
+
+.block-title {
+  color: #fff; }
+
+.whitecol {
+  color: #fff; }
+
+.log a {
+  color: #007DD5; }
+
+.ds4 .rowtf .tf p {
+  color: #CD0000; }
+
+/*# sourceMappingURL=main_color.css.map */

@@ -1,0 +1,70 @@
+==
+<header>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-sm-4 col-sm-push-4 text-center">
+      <button href="#signup" title="Заказ Звонка" class="popupcallorder"><img class="phoneimg" src="{{ 'assets/img/phone.png'|theme }}"  alt="Alt" ></button>
+    </div>
+    <div class="col-sm-4 col-sm-pull-4">
+          
+            {% component 'editable' file="header/phone.htm" %}
+          
+    </div>
+    <div class="col-sm-4 text-center">
+      <a href="http://facebook.com" target="_blank" title=""><img  class="loginimg" src="{{ 'assets/img/f.png'|theme }}" alt="Facebook"></a>
+      <a href="http://vk.com" target="_blank" title=""><img  class="loginimg" src="{{ 'assets/img/v.png'|theme }}" alt="VKontakte"></a>
+      <a href="http://82.200.155.9" target="_blank" title=""><span class="login">
+        &nbsp;&nbsp;&nbsp;&nbsp;ВОЙТИ&nbsp;&nbsp;
+      </span></a>
+      <img class="loginimg" src="{{ 'assets/img/login.png'|theme }}" alt="">
+<!--       <a href="#" title=""><span class="login">
+        &nbsp;eng
+      </span></a>
+ -->      </div>
+  </div>
+  <div class="row">
+    <p>&nbsp;</p>
+    <div class="col-xs-12 yellow_bg visible-lg">
+        <h1>Детский Сад</h1>
+        <span>
+          <img class="leo hidden-xs hidden-sm hidden-md" src="{{ 'assets/img/leo.png'|theme }}" alt="">
+        </span>
+        <img class="logoimg" src="{{ 'assets/img/logo.png'|theme }}"  alt="">              
+    </div>
+    <div class="row hidden-lg">
+      <div class="col-md-12 text-center">
+        <img class="logoimg" src="{{ 'assets/img/logo.png'|theme }}"  alt=""> 
+      </div>
+      <div class="col-md-12 yellow_bg  text-center" >
+        <h1>Детский Сад</h1>             
+      </div>
+    </div>    
+  </div>
+
+  <div class="row">
+    <div class="col-xs-12 text-center header_blue">
+      {% component 'editable' file="header/days.htm" %}
+      {% component 'editable' file="header/time.htm" %}
+      <br>
+    </div>
+    <div class="col-xs-12 text-center">
+      <img class="sled1" src="{{ 'assets/img/sled1.png'|theme }}">
+      <img class="children1"  src="{{ 'assets/img/children1.jpg'|theme }}" height="477" width="1768" alt="">
+    </div>    
+  </div>
+  <nav class="row menuwrap">
+    <img class="sled2" src="{{ 'assets/img/sled2.png'|theme }}">
+    <div class="col-xs-12 menudiv  text-center">
+      <ul class="list-inline menu">
+        <li><a href="#about" title="">О НАС</a></li>
+        <li><a href="#ckids" title="">CAMBRIDGE KIDS</a></li>
+        <li><a href="#preferenes" title="">НАШИ ПРЕИМУЩЕСТВА</a></li>
+        <li><a href="#schedule" title="">РАСПИСАНИЕ</a></li>
+        <li><a href="#galsec" title="">ФОТОГАЛЕРЕЯ</a></li>
+        <li><a href="#faq" title="">ЧАСТО ЗАДАВАЕМЫЕ ВОПРОСЫ</a></li>
+        <li><a href="#contacts" title="">КОНТАКТЫ</a></li>
+      </ul>
+    </div>    
+  </nav>
+</div>
+</header>

@@ -1,0 +1,78 @@
+description = "Основной шаблон лэндинга"
+
+[contactForm]
+injectBootstrapAssets = "1"
+injectMainScript = "1"
+==
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>Детский сад CAMBRIDGE KIDS</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="description" content="{{ this.page.meta_description }}">	
+  <meta name="author" content="AngryGantz@gmail.com studioweb.pro">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/png" href="{{ 'assets/images/favicon.png'|theme }}" />
+	{% styles %}
+  <link href="{{ [
+  		'assets/libs/bootstrap.min.css',
+  		'assets/libs/magnific-popup/magnific-popup.css',
+  		'assets/libs/animate/animate.css',
+  		'assets/css/fonts.css',
+      'assets/css/theme.css'
+  ]|theme }}" rel="stylesheet">
+</head>
+<body>
+
+{% page %}
+
+<div class="hidden">
+  <div id="signup">
+    <div class="confirm-container"></div>
+    <form class="flexiContactForm" role="form"
+          data-request="contactForm::onMailSent"
+          data-request-update="'contactForm::confirm': '.confirm-container'">
+
+        <div class="form-groups">
+            <div class="form-group">
+                <input type="text" class="form-control" value=""  name="name" placeholder="Имя">
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" value="" name="email" placeholder="E-Mail">
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" value="" name="phone" placeholder="Телефон">
+            </div>
+            <button type="submit" class="btn btn-primary btn-lg pull-right">Отправить</button>
+        </div>
+    </form> 
+  </div>
+</div>
+
+	<!-- СОВМЕСТИМОСТЬ СО СТАРЫМИ IE-БРАУЗЕРАМИ -->
+
+	<!--[if lt IE 9]>
+	<script src="libs/html5shiv/es5-shim.min.js"></script>
+	<script src="libs/html5shiv/html5shiv.min.js"></script>
+	<script src="libs/html5shiv/html5shiv-printshiv.min.js"></script>
+	<script src="libs/respond/respond.min.js"></script>
+	<![endif]-->
+
+	<!-- Yandex.Metrika counter --><!-- /Yandex.Metrika counter -->
+	<!-- Google Analytics counter --><!-- /Google Analytics counter -->
+            <!-- 'assets/libs/jquery-2.1.3.min.js', -->
+        <!-- Scripts -->
+  <script src="{{ [
+      'assets/js/jquery.js',
+      'assets/libs/magnific-popup/jquery.magnific-popup.min.js',
+      'assets/libs/bootstrap.min.js',
+      'assets/libs/waypoints/waypoints.min.js',
+      'assets/libs/animate/animate-css.js',
+      'assets/js/common.js'
+  ]|theme }}"></script>
+  {% framework extras %}
+  {% scripts %}
+
+</body>
+</html>
